@@ -36,7 +36,7 @@ def hal2_simpandata():
 
     data.append({"Email": email, "Film": film, "Jumlah Tiket": jumlah_tiket, "Harga": harga, "Pembayaran": pembayaran})
     label_hasil2.config(text="Data berhasil disimpan!", font=("Times New Roman", 10, "bold", "italic"), fg="green")
-
+    
     entry3.delete(0, tk.END)
     select.set("Select a film")
     entry5.delete(0, tk.END)
@@ -137,7 +137,7 @@ def hal7_hapusdata():
 
 jendela = tk.Tk()
 jendela.title("Aplikasi Pemesanan Bioskop")
-jendela.geometry("800x500")
+jendela.geometry("1000x500")
 
 style = ttk.Style()
 style.theme_use("clam")
@@ -207,7 +207,7 @@ label10.pack(pady=5)
 entry10 = Entry(hal4)
 entry10.pack()
 button6 = Button(hal4, text="Cari Data", command=hal4_caridata, bg="#FFFFFF")
-button6.pack()
+button6.pack(pady=5)
 
 kolom_cari = ("Email", "Film", "Jumlah Tiket", "Harga", "Pembayaran")
 tabel_cari = ttk.Treeview(hal4, columns=kolom_cari, show="headings", height=10)
